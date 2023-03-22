@@ -1,0 +1,25 @@
+﻿@if (TempData["success"] != null)
+{
+    //добавляем скрипт от jQuery
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    @*toast js => зеленое модальное окно*@
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+        <script type="text/javascript">
+            toastr.success('@TempData["success"]');
+        </script>
+}
+
+@if (TempData["error"] != null)
+{
+    //добавляем скрипт от jQuery
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    @*toast js => зеленое модальное окно*@
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+        <script type="text/javascript">
+            toastr.error('@TempData["error"]');
+        </script>
+}
